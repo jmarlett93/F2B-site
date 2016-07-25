@@ -5,8 +5,10 @@
 * line 73 > content settings
 *
 *theme color palette TBD
-* orange light: rgba(241, 193, 105, 0.95)
-* star grey: rgba(167, 171, 197, 0.95 );
+* Asphalt: #44495E, #2B2F3F
+*Grey: #94929F
+*Offwhite: #E4E3EC
+*Red : #9D1416, #A8280E
 * 
 */
 
@@ -49,12 +51,12 @@ section { height:auto; }
   
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #080811; }
+    background-color: #E4E3EC; }
 
 main {
-    margin: 3.8rem 0 0 0;
+    margin: 7rem 0 0 0;
     font-size: 100%;
-    background-color: #080811; }
+    background-color: #E4E3EC; }
 
 section {
     margin: 1% 0; }
@@ -64,8 +66,9 @@ a {
     
 .wrapper {
     z-index: 500;
-    background-color: #090815;
+    background-color: #44495E;
     height: auto;
+    padding: 1em 0;
     width: 100%;
     position: fixed;
     top:0px;
@@ -76,97 +79,61 @@ a {
     align-items: center;
     justify-content: flex-start; }
    
-.wrapper > button {
-    background-color:inherit;
-    height: 100%;
-    border: none;
-    color:#CEE8E8;
-    font-size: inherit; }
-    .wrapper > button:active {
-        color:#046DD6; }
-    
-.wrapper > button > h1 {
-    font-family:'Roboto', 'Ostrich Sans', 'Oswald Sans', 'Helvetica';
-    font-size: 1.3em;
-    color: inherit;
+.wrapper > div {
+    margin-left: 1em;
     margin-right: auto;
-    margin-left: 2rem; }
+}
+
+.wrapper > div > h1, .wrapper > div > h2 {
+    font-size: 1.5em;
+    font-weight: 800;
+    color:#FFFfff;
+    text-transform: uppercase;
+    text-shadow: 2px 1px 1px #000;
+} 
+
+.wrapper > div > p {
+    font-size: 1.5em;
+    font-weight: 800;
+    color:#FFFfff;
+    text-transform: capitalize;
+    text-shadow: 2px 1px 1px #000;
+}
 
 .wrapper > ul {
+        height:auto;
         display:-webkit-flex;
         display: flex;
         flex-wrap: nowrap;
         justify-content: flex-end;
+        margin-right: 1em;
         margin-left:auto; } 
 
 .button {
-  width: 5rem;  
-  border: solid;
-  border-width: 0.1em;
-  border-radius: 5em;
+  width: auto;  
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   padding-left: 0.5em;
   padding-right: 0.5em;
   margin: 0.5em;
-  font-size: 1.2em;
+  font-size: 1.4em;
   text-decoration: none;
-  text-align: center;
-  -webkit-transition: all 500ms ease-out;
-  -moz-transition: all 500ms ease-out;
-  -o-transition: all 500ms ease-out;
-  transition: all 500ms ease-out; }
+  text-align: center; }
 
 .wrapper > ul > a  {
-    background-color: #046DD6;
-    border-color:#046DD6;
-    color: #FCE6D3; }
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #FFFfff; }
     .wrapper > ul > a:hover {
-        background-color: #14133D;
-        color: #FCE6D3; }
+        border-bottom: 0.1em;
+        border-style: solid;
+        border-color: #FDCE44;
+        color: #FFFfff; }
 
 /*end of wrapper header bar content*/
 
 .content{
       }
-
-.inspiration {
-    margin:0; }
-
-.inspiration, #contact_me > .image-wrapper {
-    width: 100%;
-    position:relative; }
-
-.button-wrapper {
-    height: auto;
-    width: 100%;
-    position: absolute;
-    bottom: 1rem;
-    left:0;
-    display: flex;
-    border-top: 2px solid #046DD6;
-    border-color: #046DD6;
-    -webkit-transition: all 500ms ease-out;
-    -moz-transition: all 500ms ease-out;
-    -o-transition: all 500ms ease-out;
-    transition: all 500ms ease-out;  }
-    
-.button-wrapper > button {
-    border: 2px solid #046DD6; 
-    border-top: none;
-    border-radius: 0.25em;
-    margin: auto;
-    padding: 0.5em;
-    background-color:transparent;
-    -webkit-transition: all 500ms ease-out;
-    -moz-transition: all 500ms ease-out;
-    -o-transition: all 500ms ease-out;
-    transition: all 500ms ease-out; }
-    
-.button-wrapper > button > img {
-    background-color:transparent;
-    color:transparent; }
-    
     
 .container {
     height: auto;
@@ -252,9 +219,11 @@ a {
     width: 55%; }
 
 .site-footer {
-    background-color: #02010E;
-    color:#CEE8E8;
-    height: 5rem;
+    background-color: #44495E;
+    color:#FFFfff;
+    height: auto;
+    margin: auto;
+    padding: 1em 0;
     width: 100%;
     display:-webkit-flex;
     display: flex;
