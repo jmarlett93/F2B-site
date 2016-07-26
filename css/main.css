@@ -134,7 +134,11 @@ a {
 
 .content{
       }
-    
+
+.image-wrapper {
+    width: 100%;
+    position:relative; }
+
 .container {
     height: auto;
     margin: 1rem;
@@ -158,11 +162,11 @@ a {
     align-items: flex-start;
     border-radius: 0.25em; }
 
-.site-info {
-    width: 22%;
-     }
+#site-info{
+    position: absolute;
+}
 
-#site-info > h1, #interests > h1, #contacts > h1, #blog-info > h1, #wisdom > h1 {
+#site-info > h2, #interests > h2, #contacts > h2, #blog-info > h2, #wisdom > h2 {
     margin: 0.5rem auto 1rem auto;
     font-size: 1.11em;
     color: #877F7D; 
