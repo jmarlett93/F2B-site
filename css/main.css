@@ -219,7 +219,7 @@ a {
 .space-box > ul {
      display: flex;
      flex-flow: column wrap;
-     justify-content:space-around;}
+     justify-content:space-around; }
 
 .space-box > ul > li  {
     margin: 0.3em 0;
@@ -230,7 +230,15 @@ a {
     width: 2.5rem;
     border-radius: 0.1em; }
 
-
+#credit{
+    margin-right:1em;
+    float:right; }
+    
+#credit > a {
+    color: #e9ece5; }
+    #credit > a:hover {
+       border-bottom: 1px solid #e9ece5; }
+    
 .site-footer {
     background-color: #3b3a36;
     color:#e9ece5;
@@ -247,13 +255,10 @@ a {
 
 /*styling specific for contact page*/
 
-#contact_me {
-
-}
+#contact_me {}
 
 #ajax-contact {
-   background:transparent;
-    }
+   background:transparent; }
 
 #ajax-contact > div {
     background:transparent;
@@ -267,21 +272,16 @@ a {
     margin: 1%; }
 
 #ajax-contact > div > div > label {
-    
     margin-bottom: 1%; }
 
 #ajax-contact > div > div > button {
-    font-size: 1em;
-     }
-    #ajax-contact > div > div > button:active {
+    font-size: 1em; }
+   #ajax-contact > div > div > button:active {
         }
 
 #ajax-contact > div > div > input, textarea, button {
     
      }
-
-#ajax-contact textarea {
-    font-size: 0.85em; }
 
 #ajax-contact > div > div > input:focus, textarea:focus {
  }
