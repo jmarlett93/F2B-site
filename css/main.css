@@ -35,7 +35,7 @@ html, body, div, span, applet, object, iframe, a, abbr, acronym, address, big, c
 }
 
 html{
-  background: url(/css/images/austin-suburb.jpg) no-repeat center center fixed; 
+  background: url(/css/images/lake-austin.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -75,7 +75,7 @@ a {
 .wrapper {
     z-index: 500;
     /*background: transparent;*/
-    background: linear-gradient(to right, rgba(95,97,97, 1), rgba(95,97,97, 0.25));
+    background: linear-gradient(to right, rgba(95,97,97, 1), rgba(95,97,97, 0.5));
     height: auto;
     padding: 1em 0 0 0;
     width: 100%;
@@ -89,7 +89,7 @@ a {
     align-items: center; }
    
 #branding {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
     width:100%;
     display:-webkit-flex;
     display: flex;
@@ -98,7 +98,7 @@ a {
     align-items: flex-start; }
 
 #branding > h1, #branding > div, #branding > ul{
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: 900;
     color:#e9ece5;
     text-transform: uppercase; }
@@ -128,9 +128,28 @@ a {
     transition: all 500ms ease-out;
     }
     #branding > ul > a:hover {
-        border: 1px solid #5F6161;
-        color: #5F6161; }
+        
+        border: 1px solid #3b3a36;
+        color: #3b3a36; }
 
+/*end of wrapper header bar content*/
+
+#resources {
+    margin: 2rem;
+    padding: 1rem 0.5rem;
+    background-color: rgba(233,236,229,1); }
+
+#resources > h1 {
+    margin: 0 2em;
+    text-align: center;
+    padding: 0 0 0.5em 0;
+    /*color:#5F6161;*/
+    color:#3b3a36;
+    /*border-top: 1px solid #3b3a36;*/
+    font-size: 2em;
+    font-weight: 600;
+    font-style:italic; }
+    
 #banner{
     width:100%;
     padding: 1em 0;
@@ -140,40 +159,26 @@ a {
     display:-webkit-flex;
     display: flex;
     flex-direction: row;
-    justify-content:space-around;
-}
+    justify-content:space-around; }
+    
 #banner > p {
     margin: auto;
-    padding:0.35em 1em;
-    border: 1px solid #e9ece5;
-    font-size: 1.75em;
+    padding-top: 0.5em;
+    /*background: rgba(95,97,97,0.5);*/
+    /*background: linear-gradient(to right, rgba(95,97,97,0.5), rgba(95,97,97, 0.25));*/
+    color: #3b3a36;
+    border-top: 1px solid #3b3a36;
+    font-size: 1.5em;
     font-weight: 800;
-    font-style: italic;
     text-transform: capitalize; }
-
-
-/*end of wrapper header bar content*/
-
-.content{
-      }
 
 .image-wrapper {
     width: 100%;
     position:relative; }
-
-main > h1 {
-    margin: 0 2em;
-    text-align: center;
-    padding: 0 0 0.5em 0;
-    color:#5F6161;
-    border-bottom: 0.1em solid #5F6161;
-    font-size: 2.5em;
-    font-weight: 600;
-    font-style:italic; }
-
+    
 .container {
-    margin: 1rem;
-    padding: 1rem 0.5rem;
+    margin: 2em;
+    padding: 1em 0.5em;
     display: flex;
     flex-wrap: wrap;
     justify-content:flex-start; }
@@ -247,15 +252,18 @@ main > h1 {
 }
 
 #ajax-contact {
+   background:transparent;
     }
 
 #ajax-contact > div {
+    background:transparent;
     width: 98%;
     height: 98%;
     margin: 1%;
     font-size: 1.35em; }
 
 #ajax-contact > div > div {
+    background:transparent;
     margin: 1%; }
 
 #ajax-contact > div > div > label {
