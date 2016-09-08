@@ -23,15 +23,12 @@ html, body, div, span, applet, object, iframe, a, abbr, acronym, address, big, c
   font-family: inherit;
   display: block; }
 
-@media all and (max-width: 1200px) {
-  body { font-size: 80%; }
+@media all and (min-width: 880px) {
+  body { font-size: 95%; }
 }
 
-@media all and (max-width: 880px) {
-  body { font-size: 80%; }
-}
-@media all and (max-width: 500px) {
-  body { font-size: 50%; }
+@media all and (min-width: 1200px) {
+  body { font-size: 100%; }
 }
 
 html{
@@ -75,7 +72,7 @@ a {
 .wrapper {
     z-index: 500;
     /*background: transparent;*/
-    background: linear-gradient(to right, rgba(95,97,97, 1), rgba(95,97,97, 0.5));
+    background: linear-gradient(to right, rgba(95,97,97, 1), rgba(95,97,97, 0.80));
     height: auto;
     padding: 1em 0 0 0;
     width: 100%;
@@ -98,7 +95,7 @@ a {
     align-items: flex-start; }
 
 #branding > h1, #branding > div, #branding > ul{
-    font-size: 1.3em;
+    font-size: 1.5em;
     font-weight: 900;
     color:#e9ece5;
     text-transform: uppercase; }
@@ -189,8 +186,8 @@ a {
     width: 22em;
     height: 30em;
     background: linear-gradient(to bottom, rgba(110,132,144, 1), rgba(110,132,144,0.75));
-    background: -o-linear-gradient(to bottom, rgba(255,255,255, 0), rgba(255,255,255,1));
-    background: linear-gradient (to bottom, rgba(255,255,255, 0), rgba(255,255,255,1));
+    background: -o-linear-gradient(to bottom, rgba(110,132,144, 1), rgba(110,132,144,0.75));
+    background: linear-gradient (to bottom, rgba(110,132,144, 1), rgba(110,132,144,0.75));
     padding: 1% 1%;
     color: #e9ece5; 
     display: flex;
@@ -241,7 +238,9 @@ a {
        border-bottom: 1px solid #e9ece5; }
     
 .site-footer {
-    background-color: #3b3a36;
+    background: linear-gradient(to right, rgba(95,97,97, 1), rgba(95,97,97, 0.80));
+    background: -o-linear-gradient(to right, rgba(95,97,97, 1), rgba(95,97,97, 0.80));
+    background: linear-gradient (to right, rgba(95,97,97, 1), rgba(95,97,97, 0.80));
     color:#e9ece5;
     height: auto;
     margin: auto;
@@ -256,36 +255,53 @@ a {
 
 /*styling specific for contact page*/
 
-#contact_me {}
+form {
+    margin: auto;
+    height:auto;
+    display:-webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start; 
+    font-size: 1.5em; }
 
-#ajax-contact {
-   background:transparent; }
+div {
+    width: 90%;
+    margin-right: auto;
+    display:-webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start; }
 
-#ajax-contact > div {
-    background:transparent;
-    width: 98%;
-    height: 98%;
-    margin: 1%;
-    font-size: 1.35em; }
+label {
+    width: 100%; }
 
-#ajax-contact > div > div {
-    background:transparent;
-    margin: 1%; }
+input {
+    border-radius: 0.25em;
+    font-size: 1em;
+    height: 3em;
+    width: 100%; }
 
-#ajax-contact > div > div > label {
-    margin-bottom: 1%; }
+button {
+    padding: 0.25em;
+    margin: auto;
+    margin-top: 1em;
+    width: 7em;
+    height: 3.5em;
+    font-size: 1em;
+    text-transform: uppercase;
+    background: transparent;
+    border: 1px solid #e9ece5;
+    color: #e9ece5;
+    -webkit-transition: all 500ms ease-out;
+    -moz-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    transition: all 500ms ease-out; }
+    button:hover {
+        border: 1px solid #2A2C2C;
+        color: #2A2C2C;     }
 
-#ajax-contact > div > div > button {
-    font-size: 1em; }
-   #ajax-contact > div > div > button:active {
-        }
-
-#ajax-contact > div > div > input, textarea, button {
-    
-     }
-
-#ajax-contact > div > div > input:focus, textarea:focus {
- }
     
 
 

@@ -15,10 +15,12 @@ function pageInitializer(){
         /*load different UI features based on page*/
         function queryPage(){
             if(document.body.id == "homepage"){
+                //call homepage functions
                 registerButtons("down");
                 registerButtons("sparkle");
                 
             }else if(document.body.id == "contactpage"){
+                //call contactpage functions
                 registerButtons("sparkle");
             }
         
@@ -42,15 +44,8 @@ function pageInitializer(){
                 return elem; }
             
             /*create a cover div, insert pretty stars at intervals on cover then remove after 5 seconds*/
-            function animateStars(){
-                var elem = document.getElementById("star-pic");
-                var dimensions = [elem.offsetWidth, elem.offsetHeight];
-                var animateOverlay = document.
-                elem.insertBefore
-                                
-            }
-            function star(){}
-    }
+
+        }
     }/*end function init*/    
 } /* end function pageInitializer*/
 
