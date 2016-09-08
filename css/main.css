@@ -19,7 +19,6 @@ html, body, div, span, applet, object, iframe, a, abbr, acronym, address, big, c
   outline: 0;
   font-weight: inherit;
   font-style: inherit;
-  font-size: 100%;
   font-family: inherit;
   display: block; }
 
@@ -29,7 +28,7 @@ html{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
+  font-size: 16px; }
 
 button:focus{
     outline:none; }
@@ -47,12 +46,13 @@ img {
 section { height:auto; }
   
 body {
+    height:100%;
     font-family:  'Times New Roman', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: transparent; }
 
 main {
+    height: 100%;
     margin: 7em 0 5em 0;
-    font-size: 100%;
     background-color: transparent; }
 
 section {
@@ -63,7 +63,6 @@ a {
     
 .wrapper {
     z-index: 500;
-    /*background: transparent;*/
     background: linear-gradient(to right, rgba(95,97,97, 1), rgba(95,97,97, 0.80));
     height: auto;
     padding: 1em 0 0 0;
@@ -80,34 +79,36 @@ a {
 #branding {
     margin-bottom: 0.5em;
     width:100%;
+    font-size: 1.1em;
     display:-webkit-flex;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start; }
+    align-items: center; }
 
 #branding > h1, #branding > div, #branding > ul{
-    font-size: 1.5em;
     font-weight: 900;
     color:#e9ece5;
     text-transform: uppercase; }
     
 #branding > h1 {
+    width: 80%;
     margin: 0 0 0 0.5em;
-    padding-right: 0.5em;
-     }
+    text-align: center; }
     
 #branding > div{
+    width:80%;
     margin: 0.5 0 0 0;
-    padding-left: 0.5em;
-    border-left: solid 1px #e9ece5; }
+    border-top: solid 1px #e9ece5;
+    text-align:center; }
 
 #branding > ul {
-    margin-left:auto;
-    margin-right: 1em; } 
+    margin:auto; } 
     
 #branding > ul > a  {
     padding: 0.35em 1em;
+    font-size: 1.4em;
+    margin-top: 0.25em;
     text-transform: uppercase;
     border: 1px solid #e9ece5;
     color: #e9ece5;
@@ -296,7 +297,27 @@ button {
 @media (min-width: 880px) {
   body { font-size: 95%; }
 
-  .space-box {
+  #branding {
+      flex-direction: row;}
+
+  #branding > h1 {
+    width: auto;
+    margin: 0 0 0 0.5em;
+    padding-right: 0.5em; }
+    
+   #branding > div{
+    width:auto;
+    margin: 0.5 0 0 0;
+    padding-left: 0.5em;
+    text-align:left;
+    border-top: none;
+    border-left: solid 1px #e9ece5; }
+
+    #branding > ul {
+    margin-left:auto;
+    margin-right: 1em; } 
+   
+   .space-box {
     margin:1em auto;
     width: 22em; }
 
@@ -304,8 +325,7 @@ button {
         flex-direction: row; }
     
     #banner {
-    flex-direction: row; }
-}
+    flex-direction: row; } }
 
 @media (min-width: 1200px) {
   body { font-size: 100%; }
