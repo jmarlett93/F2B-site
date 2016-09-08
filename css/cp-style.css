@@ -1,0 +1,12 @@
+#CP-form {
+  width: 80%;
+
+}
+
+@media all and (min-width: 880px) {
+  body { font-size: 95%; }
+}
+
+@media all and (min-width: 1200px) {
+  body { font-size: 100%; }
+}
