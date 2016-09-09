@@ -1,6 +1,6 @@
 function pageInitializer(){
     
-    var isReady = false; 
+    let isReady = false; 
     document.addEventListener("DOMContentLoaded", init, false);
     console.log(isReady);
     
@@ -16,30 +16,41 @@ function pageInitializer(){
         function queryPage(){
             if(document.body.id == "homepage"){
                 //call homepage functions
-                registerButtons("down");
-                registerButtons("sparkle");
+                registerButtons("submit");
                 
-            }else if(document.body.id == "contactpage"){
+            }else if(document.body.id == "contact-page"){
                 //call contactpage functions
-                registerButtons("sparkle");
+                registerButtons("submit");
             }
         
             function registerButtons(ID){
-                var action = '';
-                if (ID == "down"){
-                    action = scrollToContent;
-                }else if (ID == "sparkle"){
-                    action = animateStars; 
+                let action = '';
+                if (ID == "submit"){
+                     action = processForm;
                 }
                 
-                var button = document.getElementById(ID);
+                let button = document.getElementById(ID);
                 button.addEventListener("click", action, false);
-                return button; 
+                return button;
              }
-    
+             
+            function processForm(){
+                
+            }
+            function sendEmail(){
+                console.log("clicked");
+                
+                emailjs.send("gmail","template_bxGX1vPI",{name: "James", notes: "Check this out!"})
+                .then(function(response) {
+                    console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+                }, function(err) {
+                console.log("FAILED. error=", err);
+});
+                
+            }
             function scrollToContent(){
                 console.log("clicked");
-                var elem = document.getElementById("link-container");
+                let elem = document.getElementById("link-container");
                 elem.scrollIntoView(false);
                 return elem; }
             
@@ -48,7 +59,6 @@ function pageInitializer(){
         }
     }/*end function init*/    
 } /* end function pageInitializer*/
-
 
 var pageOps = pageInitializer();
 

@@ -55,9 +55,6 @@ main {
     margin: 13em 0 5em 0;
     background-color: transparent; }
 
-section {
-    margin: 1% 0; }
-
 a {
     text-decoration: none; }
     
@@ -142,7 +139,7 @@ a {
     
 #banner{
     width:100%;
-    padding: 1em 0;
+    padding: 0.25em 0;
     color: #e9ece5;
     /*background-color: #6E8490;*/
     align-self: flex-end;
@@ -153,7 +150,7 @@ a {
     
 #banner > p {
     margin: auto;
-    padding-top: 0.5em;
+    padding: 0.5em 0;
     /*background: rgba(95,97,97,0.5);*/
     /*background: linear-gradient(to right, rgba(95,97,97,0.5), rgba(95,97,97, 0.25));*/
     color: #e9ece5;
@@ -167,16 +164,16 @@ a {
     position:relative; }
     
 .container {
-    margin: 2em;
-    padding: 1em 0.5em;
+    margin: 0.25em 0;
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: flex-start; }
 
 .space-box {
-    margin:1em 0;
-    width: 100%;
+    margin: 0.25em 0;
+    width: 98%;
     height: 30em;
     background: linear-gradient(to bottom, rgba(110,132,144, 1), rgba(110,132,144,0.75));
     background: -o-linear-gradient(to bottom, rgba(110,132,144, 1), rgba(110,132,144,0.75));
@@ -203,9 +200,6 @@ a {
     width: 90%; 
     border-bottom: 1px solid #e9ece5;
     align-self: center; }
-
-#site-info{
-    position: relative; }
 
 .space-box > ul {
      display: flex;
@@ -297,18 +291,18 @@ button {
 @media (min-width: 880px) {
   body { font-size: 95%; }
   
-  main {
+main {
     margin: 7em 0 5em 0; }
 
-  #branding {
+#branding {
       flex-direction: row;}
 
-  #branding > h1 {
+#branding > h1 {
     width: auto;
     margin: 0 0 0 0.5em;
     padding-right: 0.5em; }
     
-   #branding > div{
+#branding > div{
     width:auto;
     margin: 0.5 0 0 0;
     padding-left: 0.5em;
@@ -316,26 +310,29 @@ button {
     border-top: none;
     border-left: solid 1px #e9ece5; }
 
-    #branding > ul {
+#branding > ul {
     margin-left:auto;
     margin-right: 1em; }
     
-    #resources {
+#resources {
     margin: 1em 3em;
     padding: 1em 0.5em; }
     
-    #resources > h1 {
+#resources > h1 {
         font-size: 2em; }
     
-    #banner > p {
+#banner > p {
         font-size: 1.5em; }
    
-   .space-box {
+.space-box {
     margin:1em auto;
     width: 22em; }
 
-    .container {
+.container {
+        margin: 2em;
+        padding: 1em 0.5em;
         flex-direction: row; }
+    
     
     #banner {
     flex-direction: row; } }

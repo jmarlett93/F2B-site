@@ -6,6 +6,13 @@
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 <link rel="stylesheet" href="./css/main.css" media="screen" title="base" charset="utf-8">
 <title>Sell Your House For Cash | Fixin To Buy, LLC.</title>
+<script type= "text/javascript" src= "./js/main.js"></script>
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_3QOMhTFENc3mrGtlsHq1I");
+   })();
+</script>
 </head>
 <body id="homepage">
     <nav class="wrapper">
@@ -32,11 +39,11 @@
             </div>
         </div>
         
-        <section id= "site-info" class="container">
+        <section id="site-info" class="container">
             <div class="space-box">
                 <h2>Contact Us For A Quote</h2>
 
-        <form>
+        <form id="email-form">
 
             <div class="form-group">
                 <label for="First Name">First Name:</label>
@@ -63,7 +70,7 @@
                 <input type="text" class="form-control">
             </div>
           
-            <button type="submit" class="btn btn-default"> Submit</button>
+            <button id="submit" type="submit" class="btn btn-default"> Submit</button>
                     
         </form>
         <footer></footer>
