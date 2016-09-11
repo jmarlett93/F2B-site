@@ -1,64 +1,55 @@
 function pageInitializer(){
     
     let isReady = false; 
-    document.addEventListener("DOMContentLoaded", init, false);
+    window.addEventListener("load", init);
     console.log(isReady);
     
     function init(){
 
         isReady = true;  
-        queryPage();
-        
-        return {
-           isReady }
+        queryPage();   
+        } //init
         
         /*load different UI features based on page*/
         function queryPage(){
+
             if(document.body.id == "homepage"){
                 //call homepage functions
-                registerButtons("submit");
+
+                let formContent = setUpForm();
                 
             }else if(document.body.id == "contact-page"){
                 //call contactpage functions
                 registerButtons("submit");
             }
-        
-            function registerButtons(ID){
-                let action = '';
-                if (ID == "submit"){
-                     action = processForm;
-                }
-                
-                let button = document.getElementById(ID);
-                button.addEventListener("click", action, false);
-                return button;
-             }
-             
+            
             function processForm(){
-                
-            }
-            function sendEmail(){
-                console.log("clicked");
-                
-                emailjs.send("gmail","template_bxGX1vPI",{name: "James", notes: "Check this out!"})
+                let mailInputs = document.getElementsByClassName("form-control");
+                return mailInputs;
+            }//process form
+
+            function sendEmail(data){
+                 
+                emailjs.send("gmail","template_bxGX1vPI",{first_name: data[0], last_name: data[1], email: data[2], phonenumber:data[3], address: data[4] })
                 .then(function(response) {
                     console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
                 }, function(err) {
                 console.log("FAILED. error=", err);
-});
-                
-            }
-            function scrollToContent(){
-                console.log("clicked");
-                let elem = document.getElementById("link-container");
-                elem.scrollIntoView(false);
-                return elem; }
+                });
+            }  //sendEmail
             
-            /*create a cover div, insert pretty stars at intervals on cover then remove after 5 seconds*/
+            function setUpForm(){
+                let form = document.getElementById("email-form");
+                form.addEventListener('submit', function (event){
+                    event.preventDefault();
+                    let data = processForm();
+                    console.log(data);
 
-        }
-    }/*end function init*/    
+                    });
+                return form;
+            }/*end function setUpForm */
+        }/*queryPage*/
+          
 } /* end function pageInitializer*/
 
 var pageOps = pageInitializer();
-
