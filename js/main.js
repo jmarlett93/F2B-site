@@ -23,13 +23,16 @@ function pageInitializer(){
    
             }
             
-            function processForm(){
-                let htmlInputs = document.getElementsByClassName("form-control");
-                let mailInputs = [].forEach.call(htmlInputs, function(v,i,a){
-                    return htmlInputs[i];
-                })
-                console.log(mailInputs);             
-                return mailInputs;
+            function processForm(form){
+                let inputs = form.querySelectorAll("input");
+                let arr = [];
+                console.log(inputs);
+                for ( let i = 0; i < inputs.length; i++){
+                    let input = inputs[i];
+                    arr.push(input.value);
+                }
+                let formData = JSON.stringify(arr);
+                return formData;
             }
 
             function sendEmail(data){
@@ -43,13 +46,13 @@ function pageInitializer(){
             }
             
             function setUpForm(){
-                let form = document.getElementById("email-form");
-                form.addEventListener('submit', function (event){
+                let formFB = document.getElementById("email-form");
+                formFB.addEventListener('submit', function (event){
                     event.preventDefault();
-                    let data = processForm();
+                    let data = processForm(formFB);
                     console.log(data);
                     });
-                return form;
+                return formFB;
             }/*end function setUpForm */
         }/*queryPage*/
           
