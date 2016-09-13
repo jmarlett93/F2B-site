@@ -14,25 +14,26 @@ function pageInitializer(){
         function queryPage(){
 
             if(document.body.id == "homepage"){
-
-                let formContent = setUpForm();
-                
+                 setUpForm();
             }else if(document.body.id == "contact-page"){
-
-                let formContent = setUpForm();
-   
+                setUpForm();
             }
             
             function processForm(form){
                 let inputs = form.querySelectorAll("input");
-                let arr = [];
-                console.log(inputs);
+                let formData = [];
                 for ( let i = 0; i < inputs.length; i++){
                     let input = inputs[i];
-                    arr.push(input.value);
+                    formData.push(input.value);
                 }
-                let formData = JSON.stringify(arr);
                 return formData;
+            }
+            
+            function disableCompletedForm(form){
+                form.reset();
+                document.getElementById("submit").disabled = true;
+                document.getElementById("submit").innerHTML = "Submitted";
+                return form;
             }
 
             function sendEmail(data){
@@ -49,13 +50,15 @@ function pageInitializer(){
                 let formFB = document.getElementById("email-form");
                 formFB.addEventListener('submit', function (event){
                     event.preventDefault();
-                    let data = processForm(formFB);
-                    console.log(data);
+                    let emailData = processForm(formFB);
+                    console.log(emailData);
+                    disableCompletedForm(formFB);
+                    sendEmail(emailData);
                     });
-                return formFB;
+                
             }/*end function setUpForm */
         }/*queryPage*/
           
 } /* end function pageInitializer*/
 
-var pageOps = pageInitializer();
+let pageOps = pageInitializer();
