@@ -1,16 +1,11 @@
 function pageInitializer(){
-    
-    let isReady = false; 
+    'use strict';
     window.addEventListener("load", init);
-    console.log(isReady);
     
     function init(){
-
-        isReady = true;  
         queryPage();   
-        } //init
+        }
         
-        /*load different UI features based on page*/
         function queryPage(){
 
             if(document.body.id == "homepage"){
@@ -56,9 +51,8 @@ function pageInitializer(){
                     sendEmail(emailData);
                     });
                 
-            }/*end function setUpForm */
-        }/*queryPage*/
-          
-} /* end function pageInitializer*/
+            }
+        }         
+}
 
 let pageOps = pageInitializer();

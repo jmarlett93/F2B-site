@@ -1,15 +1,13 @@
-var gulp = require('gulp');
-var webserver = require('gulp-webserver');
-var uglify = require('gulp-uglify');
-var imagemin = require('gulp-imagemin');
-var uglifycss = require('gulp-uglifycss');
-var htmlmin = require('gulp-htmlmin');
-var imagemin = require('gulp-imagemin');
-
-var paths = {
-    scripts: ['js/.js'],
-    styling: ['css/*.css']
-};
+const gulp = require('gulp');
+const webserver = require('gulp-webserver');
+const browserify  = require('browserify');
+const babelify    = require('babelify');
+const source      = require('vinyl-source-stream');
+const buffer      = require('vinyl-buffer');
+const uglify = require('gulp-uglify');
+const imagemin = require('gulp-imagemin');
+const uglifycss = require('gulp-uglifycss');
+const htmlmin = require('gulp-htmlmin');
 
 gulp.task('webserver', function() {
     gulp.src('./')
@@ -23,7 +21,11 @@ gulp.task('webserver', function() {
 });
 
 gulp.task('pack-js', function(){
-    return gulp.src([ 'js/main.js'])
+    return browserify({entries: 'js/main.js', debug: true})
+        .transform("babelify", {presets: ["es2015"] })
+        .bundle()
+        .pipe(source('main.js'))
+        .pipe(buffer())
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });
@@ -54,4 +56,4 @@ gulp.task('pack-html2', function(){
         .pipe(gulp.dest('dist/contact'));
 });
 
-gulp.task('prodbuild', [ 'pack-css', 'pack-html', 'pack-html2', 'pack-images']);
+gulp.task('prodbuild', ['pack-js', 'pack-css', 'pack-html', 'pack-html2', 'pack-images']);
