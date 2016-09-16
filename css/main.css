@@ -85,8 +85,7 @@ a {
 
 #branding > h1, #branding > div, #branding > ul{
     font-weight: 900;
-    color:#e9ece5;
-    text-transform: uppercase; }
+    color:#e9ece5; }
     
 #branding > h1 {
     width: 80%;
@@ -156,8 +155,7 @@ a {
     color: #e9ece5;
     border-top: 1px solid #e9ece5;
     font-size: 1.2em;
-    font-weight: 800;
-    text-transform: capitalize; }
+    font-weight: 800; }
 
 .image-wrapper {
     width: 100%;
