@@ -1,0 +1,20 @@
+{
+  "name": "F2B-site",
+  "version": "1.0.0",
+  "description": "Clean, minimal, effective 2 page web-app",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmarlett93/F2B-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmarlett93/F2B-site/issues"
+  },
+  "homepage": "https://github.com/jmarlett93/F2B-site#readme"
+}

@@ -202,10 +202,13 @@ a {
 .space-box > ul {
      display: flex;
      flex-flow: column wrap;
-     justify-content:space-around; }
+     justify-content:space-around;
+    list-style-position: outside;
+     list-style-type: circle; }
 
 .space-box > ul > li  {
-    margin: 0.3em 0;
+    display: list-item;
+    margin: 0.5em 0 0.5em 1em;
     font-size: 1.75em; }
 
 .icon {
