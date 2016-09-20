@@ -33,7 +33,7 @@ function pageInitializer(){
 
             function sendEmail(data){
                 
-                emailjs.send("gmail","template_bxGX1vPI",{first_name: data[0], last_name: data[1], email: data[2], phonenumber:data[3], address: data[4] })
+                emailjs.send("f2b-wxyz","contact_form_template",{first_name: data[0], last_name: data[1], email: data[2], phonenumber:data[3], address: data[4] })
                 .then(function(response) {
                     console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
                 }, function(err) {
