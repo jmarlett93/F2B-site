@@ -23,6 +23,7 @@ html, body, div, span, applet, object, iframe, a, abbr, acronym, address, big, c
   display: block; }
 
 html{
+  width:100%;
   background: url(/css/images/lake-austin.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -201,7 +202,7 @@ a {
 
 .space-box > ul {
      display: flex;
-     flex-flow: column wrap;
+     flex-flow: column nowrap;
      justify-content:space-around;
     list-style-position: outside;
      list-style-type: circle; }
@@ -209,7 +210,8 @@ a {
 .space-box > ul > li  {
     display: list-item;
     margin: 0.5em 0 0.5em 1em;
-    font-size: 1.75em; }
+    font-size: 1.75em;
+    align-content: center; }
 
 .icon {
     height: 2.5rem;
