@@ -39,7 +39,7 @@ gulp.task('pack-css', function(){
 });
 
 gulp.task('pack-html', function(){
-    return gulp.src('index.html')
+    return gulp.src('we-buy-houses-for-cash-austin.html')
         .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest('dist'));
 });
@@ -51,7 +51,7 @@ gulp.task('pack-images', function(){
 });
 
 gulp.task('pack-html2', function(){
-    return gulp.src('contact/index.html')
+    return gulp.src('contact/contact-us-for-a-quote.html')
         .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest('dist/contact'));
 });
