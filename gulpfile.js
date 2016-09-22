@@ -16,7 +16,7 @@ gulp.task('webserver', function() {
             livereload: true,
             directoryListing: true,
             open: true,
-            fallback: 'index.html',
+            fallback: 'we-buy-houses-for-cash-austin.html',
         }));
 });
 
